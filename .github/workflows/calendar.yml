@@ -46,8 +46,8 @@ jobs:
 
     - name: Configure Git user
       run: |
-        git config --global user.name "siddharthapatoliyafibonacciresearch"
-        git config --global user.email "siddharthapatoliya@fibonacciresearch.in"
+        git config --global user.name "Siddhartha-Patolia"
+        git config --global user.email "patoliasiddhartha@gmail.com"
 
     - name: Pull latest changes to avoid conflicts
       run: |
