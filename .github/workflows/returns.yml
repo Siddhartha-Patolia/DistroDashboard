@@ -46,8 +46,8 @@ jobs:
 
     - name: Configure Git user
       run: |
-        git config --global user.name "siddharthapatoliyafibonacciresearch"  # Replace with your name
-        git config --global user.email "siddharthapatoliya@fibonacciresearch.in"  # Replace with your email
+        git config --global user.name "Siddhartha-Patolia"  # Replace with your name
+        git config --global user.email "patoliasiddhartha@gmail.com"  # Replace with your email
 
     - name: Pull latest changes to integrate remote updates
       run: |
