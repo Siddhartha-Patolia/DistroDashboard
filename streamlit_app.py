@@ -16,6 +16,7 @@ from datetime import datetime
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
+from scipy.stats import percentileofscore
 
 
 st.cache_data.clear()
@@ -214,10 +215,18 @@ def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , eve
     ret = []
     start_date = []
     end_date = []
+    start_price = []
+    end_price = []
+    high = []
+    low = []
 
     for end , start in zip(event_ts['end'], event_ts['start']):
 
         temp_df = ohcl_1h[(ohcl_1h['US/Eastern Timezone'] >= start) & (ohcl_1h['US/Eastern Timezone'] < end)] #equality removed for 'end'. Otherwise 1 extra hour in taken.
+        entry_price = None # open price for the custom session made
+        exit_price = None # close price for the custom session made
+        maxi = None # Highest price during the custom session made
+        mini = None # Lowest price during the custom session made
         
         if(temp_df.empty):
             vol_ret.append(np.nan)
@@ -225,18 +234,36 @@ def calc_event_spec_returns(selected_event , all_event_ts , ohcl_1h , mode , eve
             ret.append(np.nan)
             start_date.append(np.nan)
             end_date.append(np.nan)
+            start_price.append(np.nan)
+            end_price.append(np.nan)
+            high.append(np.nan)
+            low.append(np.nan)
+
         else:
+            entry_price = temp_df['Open'].iloc[0]
+            exit_price = temp_df['Close'].iloc[-1]
+            maxi = temp_df['High'].max()
+            mini = temp_df['Low'].min()
+
             vol_ret.append((temp_df['High'].max() - temp_df['Low'].min())*16)
             abs_ret.append(abs(temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
             ret.append((temp_df['Close'].iloc[-1] - temp_df['Open'].iloc[0])*16)
             start_date.append(temp_df['US/Eastern Timezone'].iloc[0])
             end_date.append(temp_df['US/Eastern Timezone'].iloc[-1])
+            start_price.append(entry_price)
+            end_price.append(exit_price)
+            high.append(maxi)
+            low.append(mini)
 
     final_df['Volatility Return'] = vol_ret
     final_df['Absolute Return'] = abs_ret
     final_df['Return'] = ret
     final_df['Start_Date'] = start_date
     final_df['End_Date'] = end_date
+    final_df['Entry_Price'] = start_price
+    final_df['Exit_Price'] = end_price
+    final_df['High'] = high
+    final_df['Low'] = low
     # print(final_df.head())
 
     final_df.dropna(inplace=True)
@@ -262,7 +289,7 @@ def plot_event_spec_returns(final_df , selected_event , dur):
         #number of instances.
         print(len(final_df[col]))  
 
-                # Annotate histogram bars with bin edges (left-right) on top of each bar
+        # Annotate histogram bars with bin edges (left-right) on top of each bar
         for patch in ax.patches:
             height = patch.get_height()
             if height == 0:
@@ -296,6 +323,7 @@ def plot_event_spec_returns(final_df , selected_event , dur):
         #     current_date = str(idx_val)  # fallback if index is not datetime
 
         zscore = (current_value - mean) / std if std != 0 else 0
+        latest_percentile = percentileofscore(final_df[col].squeeze(), current_value , kind="rank").round(2)
 
         # Red dot just above x-axis
         _ , y_max = ax.get_ylim()
@@ -307,9 +335,10 @@ def plot_event_spec_returns(final_df , selected_event , dur):
 
         # Annotate with current value, z-score, percentile, and date
         annotation_text = (
+            f"Date: {current_date}, "
             f"Value: {current_value:.2f}, "
             f"Z: {zscore:.2f}, "
-            f"Date: {current_date}"
+            f"%ile: {latest_percentile}"
         )
         ax.annotate(
             annotation_text,
@@ -360,6 +389,8 @@ def plot_event_spec_returns(final_df , selected_event , dur):
         st.pyplot(figures["Volatility Return"])
         st.write("**Volatility Return = [high - low]**")
 
+
+
     
 # Setting up page configuration
 st.set_page_config(
@@ -371,13 +402,18 @@ st.set_page_config(
 
 
 
+# # Setting up tabs
+# tab1, tab2, tab3,tab4,tab5 = st.tabs(["Session and Volatility Returns for all sessions", 
+#                                  "Latest X days of Volatility Returns for each session",
+#                                  "Probability Matrix",
+#                                  "Custom Normalised Returns",
+#                                  'Event Specific Distro'])
 
-# Setting up tabs
-tab1, tab2, tab3,tab4,tab5 = st.tabs(["Session and Volatility Returns for all sessions", 
-                                 "Latest X days of Volatility Returns for each session",
-                                 "Probability Matrix",
-                                 "Custom Normalised Returns",
-                                 'Event Specific Distro'])
+tab = st.radio('Select a Tab' , ["Session and Volatility Returns for all sessions", 
+                                "Latest X days of Volatility Returns for each session",
+                                "Probability Matrix",
+                                "Custom Normalised Returns",
+                                "Event Specific Distro"])
 
 
 # Defining GitHub Repo
@@ -468,16 +504,16 @@ if desired_version in unique_versions:
 else:
     default_version_index = 0 # Default to the first element
 
+# Create drop-down and display it on the left permanantly
+x= st.sidebar.selectbox("Select Interval",unique_intervals,index=default_interval_index)
+y= st.sidebar.selectbox("Select Instrument",unique_instruments,index=default_instrument_index)
+
 
 #Define tabs:
-with tab1:
+if tab == "Session and Volatility Returns for all sessions":
 
         # Set title
         st.title("Combined Plots for all sessions")
-
-        # Create drop-down and display it on the left permanantly
-        x= st.sidebar.selectbox("Select Interval",unique_intervals,index=default_interval_index)
-        y= st.sidebar.selectbox("Select Instrument",unique_instruments,index=default_instrument_index)
 
         # Create checkboxes for type of return
         vol_return_bool = st.checkbox("Show Volatility Returns (bps)")
@@ -607,7 +643,7 @@ with tab1:
         except FileNotFoundError as e:
             print(f'File not found: {e}. Please try again later.')
 
-with tab2:
+elif tab == "Latest X days of Volatility Returns for each session":
     
         st.title("Get Volatility Returns for custom days")
         
@@ -670,7 +706,7 @@ with tab2:
             print(f'File not found: {e}. Please try again later.')
         
 
-with tab3:
+elif tab == "Probability Matrix":
         try:
             st.title("Probability Matrix (Unconditional)")
             # Use stored values from session state
@@ -791,7 +827,7 @@ with tab3:
             display_text='1h interval data unavailable for the current ticker.'
             st.markdown(f"<p style='color:red;'>{display_text}</p>", unsafe_allow_html=True)
 
-with tab4:
+elif tab == "Custom Normalised Returns":
             try:
                 # Protected tab
                 # Add password
@@ -961,6 +997,10 @@ with tab4:
                                                                                 'US/Eastern',
                                                                                 x,
                                                                                 y)
+                        if(filtered_df.empty):
+                            print('Empty')
+                        else:
+                            print("FDF" , filtered_df.head())
                         # Stats and Plots
                         stats_plots_dict=custom_filtering_dataframe.calculate_stats_and_plots(filtered_df,
                                                                             finalname,
@@ -995,6 +1035,7 @@ with tab4:
                                 data=[[f'Probability of bps ({version_value})  > {abs(enter_bps)}',
                                     str(round(stats_plots_dict['%>'],2))+'%'] ]
                     )
+
                     # Store <= ZScore
                     prob_df.loc[len(prob_df)] =[f'Probability of bps ({version_value})  <= {abs(enter_bps)}',
                                     str(round(stats_plots_dict['%<='],2))+'%']
@@ -1049,7 +1090,7 @@ with tab4:
                 st.text(e)
                 st.markdown(f"<p style='color:red;'>{display_text}</p>", unsafe_allow_html=True)
 
-with tab5:
+elif tab == "Event Specific Distro":
         
     events = ['CPI', 'PPI', 'PCE Price Index', 'Non Farm Payrolls', 'ISM Manufacturing PMI', 'ISM Services PMI',
               'S&P Global Manufacturing PMI', 'S&P Global Services PMI', 'Michigan',
@@ -1059,28 +1100,23 @@ with tab5:
     selected_event = st.selectbox("Select an event:" , events)
     duration = ['pre event (8 hr before event)' , 'immediate reaction (1 hr after the event)']
     dur = st.selectbox("Select duration: " , duration)
-
-    ############## Added by Yaman ########################################################################
+    
+    # For isolated event distribution.
     filter_isolated = st.checkbox(
-    "Exclude events with any other announcement ±2 hours",
-    help="Only show events that have no other events in the surrounding time window."
+    "Exclude events with any other announcement ±x hours",
+    help="Only include event instances that have no other events in the surrounding time window."
     )
-    ######################################################################################################
 
-    # getting the data for the timestamps of the event
-    # fname='ZN_1h_events_tagged_target_tz.csv'
-    # repo_name='DistributionProject'
-    # branch='main'
-    # plots_directory="Intraday_data_files_processed_folder"
-    # link=f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory}/{fname}"
+    #number of hours to check for the isolation of event.
+    window_hrs = 0
+    if(filter_isolated):
+        window_hrs = st.number_input(label="Choose x:",min_value=1)
+        st.text('x only takes on integer values')
 
     # all event timestamps
     for file in os.scandir("Intraday_data_files_processed_folder_pq"):
         if file.name == "ZN_1h_events_tagged_target_tz.parquet":
             all_event_ts = pd.read_parquet(file.path , engine = 'pyarrow')
-
-    # all_event_ts['US/Eastern Timezone'] = pd.to_datetime(all_event_ts.timestamp,errors='coerce',utc=True)
-    # all_event_ts['US/Eastern Timezone'] = all_event_ts['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
     all_event_ts['timestamp'] = pd.to_datetime(all_event_ts.timestamp , errors='coerce').dt.tz_localize('US/Eastern')
 
@@ -1088,9 +1124,6 @@ with tab5:
     repo_name = "DistributionProject"
     branch = "main"
     plots_directory2 = "Intraday_data_files"
-
-    # GitHub API URL to list contents of the directory
-    # api_url = f"https://api.github.com/repos/krishangguptafibonacciresearch/{repo_name}/contents/{plots_directory2}?ref={branch}"
 
     # Regular expression to match file pattern. Has to be used since the file name changes.
     pattern = re.compile(r"Intraday_data_ZN_1h_2022-12-20_to_(\d{4}-\d{2}-\d{2})\.parquet")
@@ -1103,50 +1136,50 @@ with tab5:
                print("File used:" , file.name)
                ohcl_1h = pd.read_parquet(os.path.join("Intraday_data_files_pq" , file.name) , engine = 'pyarrow')
 
-    # # Fetch file list from GitHub
-    # response = requests.get(api_url)
-    # if response.status_code != 200:
-    #     print("Failed to retrieve file list:", response.json())
-    #     exit()
-
-    # # Extract filenames and find the latest date
-    # files = response.json()
-    # matching_files = []
-
-    # for file in files:
-    #     filename = file["name"]
-    #     match = pattern.match(filename)
-    #     if match:
-    #         date_str = match.group(1)
-    #         try:
-    #             file_date = datetime.strptime(date_str, "%Y-%m-%d")
-    #             matching_files.append((file_date, filename))
-    #         except ValueError:
-    #             continue
-    # if matching_files:
-    #     latest_fname2 = max(matching_files)[1]
-    #     link2 = f"https://raw.githubusercontent.com/krishangguptafibonacciresearch/{repo_name}/{branch}/{plots_directory2}/{latest_fname2}"
-    # else:
-    #     print("No matching files found.")
-
-    # # OHCL data for 1h freq
-    # ohcl_1h = pd.read_csv(link2)
-
     # convert US/Eastern Timezone from string data type to a [datetime , ET] datatype. (str --> UTC --> ET)
     ohcl_1h['US/Eastern Timezone'] = pd.to_datetime(ohcl_1h.index,errors='coerce',utc=True)  #Datetime col has strings. so first convert that to UTC datetime.
     ohcl_1h['US/Eastern Timezone'] = ohcl_1h['US/Eastern Timezone'].dt.tz_convert('US/Eastern')
 
     my_dict = {"pre event (8 hr before event)": 1 , "immediate reaction (1 hr after the event)": 2}
 
+    # For analysis of custome time before or after an event.
+    custom = st.checkbox('Custom time',
+                          help="Enter custom number of integer hours to analyse. Positive input will analyze after the event and negative input will analyze before the event.")
 
-    ############################################### Changed a bit by Yaman ##########################################################################
-    custom = st.checkbox('Custom time')
+    final_df = None
+    delta = None
+    # calling the helper functions to populate the final_df and plot the requiered columns.
     if(custom):
-        delta = st.number_input("Enter the number of hours:", min_value=-1000, max_value=1000 , value=0, step=1)
-        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , 3 , events, delta, filter_isolated , 2)
+        delta = st.number_input("Enter the number of hours:", min_value=-1000, max_value=1000 , value=1, step=1)
+        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , 3 , events, delta, filter_isolated , window_hrs)
     else:
-        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , my_dict[dur], events, 0 , filter_isolated , 2)
+        final_df = calc_event_spec_returns(selected_event, all_event_ts, ohcl_1h , my_dict[dur], events, 0 , filter_isolated , window_hrs)
 
     plot_event_spec_returns(final_df , selected_event , dur)
 
-##########################################################
+    ## making final_df available as an excel file.
+    output = BytesIO()
+    final_df['Start_Date'] = final_df['Start_Date'].dt.tz_localize(None)
+    final_df['End_Date'] = final_df['End_Date'].dt.tz_localize(None)
+
+    # Write the DataFrame to the buffer as an Excel file
+    with pd.ExcelWriter(output, engine='openpyxl') as writer:
+        final_df.to_excel(writer, index=False, sheet_name='Sheet1')
+
+    # Move the buffer's pointer to the beginning
+    output.seek(0)
+
+    # Streamlit download button
+    st.download_button(
+        label=f"📥 Download Data",
+        data=output,
+        file_name='EventSpecificData.xlsx',
+        mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    )
+
+    st.text('The above file is for:')
+    st.text(f'Event: {selected_event}')
+    if(custom):
+        st.text(f'Time: {delta} hrs relative to the event')
+    if(filter_isolated):
+        st.text(f'Event instances where there are other events in a window of ± {window_hrs} around the selected event are excluded.')

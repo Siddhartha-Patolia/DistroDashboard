@@ -58,13 +58,13 @@ def _save_data(#Intraday_data_files,
         if (newcsv.index.to_list())!=[]:
             newstart=str(newcsv.index.to_list()[0])[:10] #starting timestamp
             newend=str(newcsv.index.to_list()[-1])[:10] #ending timestamp
-            start_end_date=f'Intraday_{symbol}_{newstart}_to_{newend}'
+            start_end_date=f'Intraday_{symbol}_{return_interval}_{newstart}_to_{newend}'
 
             #updating the daily backup files folder with the latest data.
             # alldatadict[key].to_csv(os.path.join(Daily_backup_files,f"{start_end_date}.csv"))
             alldatadict[key].to_parquet(os.path.join(Daily_backup_files_pq, f"{start_end_date}.parquet"),engine="pyarrow")
 
-            print(f'New data fetched for {symbol}: {start_end_date}')
+            print(f'New data fetched for {symbol}_{return_interval}: {start_end_date}')
             # print(alldatadict[key])
 
             if 'Adj Close' not in newcsv.columns:

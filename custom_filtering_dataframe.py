@@ -41,17 +41,16 @@ def movement(movement_type, df):
 def get_dataframe(interval,ticker_name,folder):
     for file in os.scandir(folder):
        if file.is_file():
-          if all(x in str(file.name) for x in [interval, ticker_name]) and file.name.endswith('.csv'):
-              df=pd.read_csv(os.path.join(folder,file.name))
-              print('Mydf:',df)
+          if all(x in str(file.name) for x in [interval, ticker_name]) and file.name.endswith('parquet'):
+              df=pd.read_parquet(os.path.join(folder,file.name))
               break
     return df
 
 def filter_dataframe(pre_df,filter_list="",day_dict="",timezone_column="",target_timezone="",interval="",ticker=""):
     # Filters based on "US/Eastern Timezone" column at the end.
     if ticker not in ['FGBL']:
-        pre_df[timezone_column] = pd.to_datetime(pre_df['Datetime'], errors='coerce')
-        pre_df[timezone_column] = pre_df[timezone_column].dt.tz_convert(target_timezone)
+        # pre_df[timezone_column] = pd.to_datetime(pre_df['Datetime'], errors='coerce')
+        # pre_df[timezone_column] = pre_df[timezone_column].dt.tz_convert(target_timezone)
         # Filter day and date
         pre_df['Day']=pre_df['US/Eastern Timezone'].dt.day_name()
     

@@ -69,7 +69,7 @@ class Intraday_Investing:
             url = "https://in.investing.com/rates-bonds/euro-bund-historical-data"
 
         # Initialize WebDriver
-        # driver = webdriver.Chrome()
+        driver = webdriver.Chrome()
 
         # Open the page
         driver.get(url=myurl)
@@ -129,6 +129,10 @@ class Intraday_Investing:
         fgbl_csv['Adj Close']=fgbl_csv['Close']
         fgbl_csv['Volume']=fgbl_csv['Vol.']
         fgbl_csv=fgbl_csv[['Datetime','Adj Close','Close','High','Low','Open','Volume']]
+
+        # Convert numeric columns from string to float
+        for col in ['Adj Close', 'Close', 'High', 'Low', 'Open', 'Volume']:
+            fgbl_csv[col] = pd.to_numeric(fgbl_csv[col].str.replace('%','').str.replace('-','-'), errors='coerce').astype('float64')
 
         if interval in ['1d','1w','1mo']:
             fgbl_csv['Datetime']=pd.to_datetime(fgbl_csv['Datetime'])
