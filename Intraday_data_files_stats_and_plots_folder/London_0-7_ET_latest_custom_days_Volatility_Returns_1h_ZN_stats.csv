@@ -1,7 +1,7 @@
 Volatility of Returns Statistic,"(Session:London 0-7 ET, Interval:1h, Symbol:ZN)"
 count,500.0
-mean,4.7025439453125
-std,2.765196917280287
+mean,4.732031982421875
+std,2.7822381435746077
 min,1.5
 10%,2.5
 25%,3.25
@@ -10,5 +10,5 @@ min,1.5
 95%,10.0
 99%,15.752499999999998
 max,28.25
-skewness,3.3531897957871952
-kurtosis,17.5440816867269
+skewness,3.2896782461759866
+kurtosis,16.956389617474834
