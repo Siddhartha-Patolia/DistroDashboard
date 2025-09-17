@@ -34166,38 +34166,20 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-16 16:30:00-04:00,API Crude Oil Stock ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-16 16:30:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
 2025-09-16 16:30:00-04:00,API Crude Oil Stock ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 07:00:00-04:00,MBA 30-Year Mortgage RateSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 07:00:00-04:00,MBA Mortgage ApplicationsSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 07:00:00-04:00,MBA Mortgage Market IndexSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 07:00:00-04:00,MBA Mortgage Refinance IndexSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 07:00:00-04:00,MBA Purchase IndexSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 07:00:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
 2025-09-17 07:00:00-04:00,MBA Mortgage ApplicationsSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 07:00:00-04:00,MBA 30-Year Mortgage RateSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 07:00:00-04:00,MBA Purchase IndexSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 07:00:00-04:00,MBA Mortgage Refinance IndexSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 07:00:00-04:00,MBA Mortgage Market IndexSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 08:30:00-04:00,Housing StartsAUG,2025,4,0,0,0,0,0,1
-2025-09-17 08:30:00-04:00,Housing Starts MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-17 08:30:00-04:00,Building Permits MoM PrelAUG,2025,4,0,0,0,0,0,1
 2025-09-17 08:30:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
-2025-09-17 08:30:00-04:00,Building Permits PrelAUG,2025,4,0,0,0,0,0,1
 2025-09-17 08:30:00-04:00,Housing StartsAUG,2025,4,0,0,0,0,0,1
 2025-09-17 08:30:00-04:00,Building Permits MoM PrelAUG,2025,4,0,0,0,0,0,1
 2025-09-17 08:30:00-04:00,Housing Starts MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-17 08:30:00-04:00,Building Permits PrelAUG,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Distillate Fuel Production ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Heating Oil Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Gasoline Production ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Crude Oil Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Distillate Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Gasoline Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Crude Oil Imports ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Cushing Crude Oil Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Distillate Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Distillate Fuel Production ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 10:30:00-04:00,EIA Refinery Crude Runs ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Heating Oil Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Gasoline Production ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Crude Oil Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
@@ -34205,19 +34187,10 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-17 10:30:00-04:00,EIA Crude Oil Imports ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Cushing Crude Oil Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-17 10:30:00-04:00,EIA Refinery Crude Runs ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-17 11:30:00-04:00,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-17 11:30:00-04:00,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-17 11:30:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
 2025-09-17 14:00:00-04:00,FOMC Economic Projections,2025,4,0,0,0,0,1,1
-2025-09-17 14:00:00-04:00,Interest Rate Projection - Longer,2025,4,0,0,0,0,0,1
-2025-09-17 14:00:00-04:00,Interest Rate Projection - Current,2025,4,0,0,0,0,0,1
 2025-09-17 14:00:00-04:00,Interest Rate Projection - 3rd Yr,2025,4,0,0,0,0,0,1
-2025-09-17 14:00:00-04:00,Interest Rate Projection - 2nd Yr,2025,4,0,0,0,0,0,1
-2025-09-17 14:00:00-04:00,Interest Rate Projection - 1st Yr,2025,4,0,0,0,0,0,1
-2025-09-17 14:00:00-04:00,FOMC Economic Projections,2025,4,0,0,0,0,1,1
-2025-09-17 14:00:00-04:00,Fed Interest Rate Decision,2025,4,0,0,0,0,0,1
-2025-09-17 14:00:00-04:00,Interest Rate Projection - 3rd Yr,2025,4,0,0,0,0,0,1
-2025-09-17 14:00:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
 2025-09-17 14:00:00-04:00,Interest Rate Projection - Current,2025,4,0,0,0,0,0,1
 2025-09-17 14:00:00-04:00,Interest Rate Projection - 1st Yr,2025,4,0,0,0,0,0,1
 2025-09-17 14:00:00-04:00,Interest Rate Projection - 2nd Yr,2025,4,0,0,0,0,0,1
@@ -34225,13 +34198,6 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-17 14:00:00-04:00,Interest Rate Projection - Longer,2025,4,0,0,0,0,0,1
 2025-09-17 14:00:00-04:00,International Monetary Market (IMM) Date,2025,4,0,0,0,0,0,1
 2025-09-17 14:30:00-04:00,Fed Press Conference,2025,4,0,0,0,0,0,1
-2025-09-17 14:30:00-04:00,Fed Press Conference,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Philly Fed EmploymentSEP,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Philly Fed CAPEX IndexSEP,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Philly Fed Business ConditionsSEP,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Jobless Claims 4-week AverageSEP/13,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Continuing Jobless ClaimsSEP/06,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Philadelphia Fed Manufacturing IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-18 08:30:00-04:00,Philly Fed Business ConditionsSEP,2025,4,0,0,0,0,0,1
 2025-09-18 08:30:00-04:00,Philly Fed CAPEX IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-18 08:30:00-04:00,Continuing Jobless ClaimsSEP/06,2025,4,0,0,0,0,0,1
@@ -34241,59 +34207,30 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-18 08:30:00-04:00,Philly Fed New OrdersSEP,2025,4,0,0,0,0,0,1
 2025-09-18 08:30:00-04:00,Philly Fed Prices PaidSEP,2025,4,0,0,0,0,0,1
 2025-09-18 08:30:00-04:00,Initial Jobless ClaimsSEP/13,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Philly Fed New OrdersSEP,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Philly Fed Prices PaidSEP,2025,4,0,0,0,0,0,1
-2025-09-18 08:30:00-04:00,Initial Jobless ClaimsSEP/13,2025,4,0,0,0,0,0,1
-2025-09-18 10:00:00-04:00,CB Leading Index MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-18 10:00:00-04:00,CB Leading Index MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-18 10:30:00-04:00,EIA Natural Gas Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
-2025-09-18 10:30:00-04:00,EIA Natural Gas Stocks ChangeSEP/12,2025,4,0,0,0,0,0,1
 2025-09-18 11:30:00-04:00,8-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-18 11:30:00-04:00,8-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-18 11:30:00-04:00,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-18 11:30:00-04:00,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-18 12:00:00-04:00,10-Year TIPS Auction,2025,3,1,0,0,1,0,0
-2025-09-18 12:00:00-04:00,15-Year Mortgage RateSEP/18,2025,4,0,0,0,0,0,1
-2025-09-18 12:00:00-04:00,30-Year Mortgage RateSEP/18,2025,4,0,0,0,0,0,1
 2025-09-18 12:00:00-04:00,30-Year Mortgage RateSEP/18,2025,4,0,0,0,0,0,1
 2025-09-18 12:00:00-04:00,15-Year Mortgage RateSEP/18,2025,4,0,0,0,0,0,1
 2025-09-18 13:00:00-04:00,10-Year TIPS Auction,2025,3,1,0,0,1,0,0
-2025-09-18 13:00:00-04:00,10-Year TIPS Auction,2025,3,1,0,0,1,0,0
 2025-09-18 16:00:00-04:00,Net Long-term TIC FlowsJUL,2025,4,0,0,0,0,0,1
-2025-09-18 16:00:00-04:00,Foreign Bond InvestmentJUL,2025,4,0,0,0,0,0,1
-2025-09-18 16:00:00-04:00,Net Long-term TIC FlowsJUL,2025,4,0,0,0,0,0,1
-2025-09-18 16:00:00-04:00,Overall Net Capital FlowsJUL,2025,4,0,0,0,0,0,1
 2025-09-18 16:00:00-04:00,Foreign Bond InvestmentJUL,2025,4,0,0,0,0,0,1
 2025-09-18 16:00:00-04:00,Overall Net Capital FlowsJUL,2025,4,0,0,0,0,0,1
 2025-09-18 16:30:00-04:00,Fed Balance SheetSEP/17,2025,4,0,0,0,0,0,1
-2025-09-18 16:30:00-04:00,Fed Balance SheetSEP/17,2025,4,0,0,0,0,0,1
-2025-09-19 13:00:00-04:00,Baker Hughes Total Rigs CountSEP/19,2025,4,0,0,0,0,0,1
 2025-09-19 13:00:00-04:00,Baker Hughes Total Rigs CountSEP/19,2025,4,0,0,0,0,0,1
 2025-09-19 13:00:00-04:00,Baker Hughes Oil Rig CountSEP/19,2025,4,0,0,0,0,0,1
-2025-09-19 13:00:00-04:00,Baker Hughes Oil Rig CountSEP/19,2025,4,0,0,0,0,0,1
-2025-09-22 08:30:00-04:00,Chicago Fed National Activity IndexAUG,2025,4,0,0,0,0,0,1
 2025-09-22 08:30:00-04:00,Chicago Fed National Activity IndexAUG,2025,4,0,0,0,0,0,1
 2025-09-22 10:00:00-04:00,Fed Musalem Speech,2025,4,0,0,0,0,1,1
-2025-09-22 10:00:00-04:00,Fed Musalem Speech,2025,4,0,0,0,0,1,1
-2025-09-22 11:30:00-04:00,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-22 11:30:00-04:00,3-Month Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-22 11:30:00-04:00,6-Month Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-22 11:30:00-04:00,6-Month Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-22 12:00:00-04:00,Fed Hammack Speech,2025,4,0,0,0,0,1,1
 2025-09-22 12:00:00-04:00,Fed Hammack Speech,2025,4,0,0,0,0,1,1
 2025-09-23 08:30:00-04:00,Current AccountQ2,2025,4,0,0,0,0,0,1
-2025-09-23 08:30:00-04:00,Current AccountQ2,2025,4,0,0,0,0,0,1
 2025-09-23 08:55:00-04:00,Redbook YoYSEP/20,2025,4,0,0,0,0,0,1
-2025-09-23 08:55:00-04:00,Redbook YoYSEP/20,2025,4,0,0,0,0,0,1
-2025-09-23 09:45:00-04:00,S&P Global Services PMI FlashSEP,2025,2,1,0,1,0,0,0
-2025-09-23 09:45:00-04:00,S&P Global Composite PMI FlashSEP,2025,2,1,0,1,0,0,0
-2025-09-23 09:45:00-04:00,S&P Global Manufacturing PMI FlashSEP,2025,2,1,0,1,0,0,0
 2025-09-23 09:45:00-04:00,S&P Global Composite PMI FlashSEP,2025,2,1,0,1,0,0,0
 2025-09-23 09:45:00-04:00,S&P Global Manufacturing PMI FlashSEP,2025,2,1,0,1,0,0,0
 2025-09-23 09:45:00-04:00,S&P Global Services PMI FlashSEP,2025,2,1,0,1,0,0,0
-2025-09-23 10:00:00-04:00,Richmond Fed Manufacturing Shipments IndexSEP,2025,4,0,0,0,0,0,1
-2025-09-23 10:00:00-04:00,Richmond Fed Services Revenues IndexSEP,2025,4,0,0,0,0,0,1
-2025-09-23 10:00:00-04:00,Richmond Fed Manufacturing IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-23 10:00:00-04:00,Existing Home SalesAUG,2025,4,0,0,0,0,0,1
 2025-09-23 10:00:00-04:00,Richmond Fed Manufacturing Shipments IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-23 10:00:00-04:00,Existing Home Sales MoMAUG,2025,4,0,0,0,0,0,1
@@ -34301,38 +34238,19 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-23 10:00:00-04:00,Richmond Fed Services Revenues IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-23 13:00:00-04:00,2-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-09-23 13:00:00-04:00,Money SupplyAUG,2025,4,0,0,0,0,0,1
-2025-09-23 13:00:00-04:00,2-Year Note Auction,2025,3,1,0,0,1,0,0
-2025-09-23 13:00:00-04:00,Money SupplyAUG,2025,4,0,0,0,0,0,1
 2025-09-23 16:30:00-04:00,API Crude Oil Stock ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-23 16:30:00-04:00,API Crude Oil Stock ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 07:00:00-04:00,MBA Purchase IndexSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 07:00:00-04:00,MBA Mortgage Refinance IndexSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 07:00:00-04:00,MBA Mortgage Market IndexSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 07:00:00-04:00,MBA Mortgage ApplicationsSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,Building Permits FinalAUG,2025,4,0,0,0,0,0,1
-2025-09-24 07:00:00-04:00,MBA 30-Year Mortgage RateSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,Building Permits MoM FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,MBA Purchase IndexSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,MBA 30-Year Mortgage RateSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,MBA Mortgage Refinance IndexSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,MBA Mortgage Market IndexSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 07:00:00-04:00,MBA Mortgage ApplicationsSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:00:00-04:00,New Home Sales MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-24 10:00:00-04:00,New Home SalesAUG,2025,4,0,0,0,0,0,1
 2025-09-24 10:00:00-04:00,Building Permits MoM FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 10:00:00-04:00,Building Permits FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 10:00:00-04:00,New Home SalesAUG,2025,4,0,0,0,0,0,1
 2025-09-24 10:00:00-04:00,New Home Sales MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Distillate Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Crude Oil Imports ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Refinery Crude Runs ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Heating Oil Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Gasoline Production ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Distillate Fuel Production ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Cushing Crude Oil Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 10:30:00-04:00,Building Permits MoM FinalAUG,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Gasoline Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 10:30:00-04:00,EIA Crude Oil Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 10:30:00-04:00,EIA Crude Oil Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 10:30:00-04:00,EIA Gasoline Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 10:30:00-04:00,Building Permits FinalAUG,2025,4,0,0,0,0,0,1
@@ -34343,40 +34261,16 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-24 10:30:00-04:00,EIA Heating Oil Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 10:30:00-04:00,EIA Refinery Crude Runs ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-24 10:30:00-04:00,EIA Crude Oil Imports ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-24 11:30:00-04:00,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-24 11:30:00-04:00,Building Permits MoM FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 11:30:00-04:00,17-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-24 11:30:00-04:00,Building Permits FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 13:00:00-04:00,5-Year Note Auction,2025,3,1,0,0,1,0,0
 2025-09-24 13:00:00-04:00,2-Year FRN Auction,2025,3,1,0,0,1,0,0
-2025-09-24 13:00:00-04:00,5-Year Note Auction,2025,3,1,0,0,1,0,0
-2025-09-24 13:00:00-04:00,Building Permits FinalAUG,2025,4,0,0,0,0,0,1
-2025-09-24 13:00:00-04:00,2-Year FRN Auction,2025,3,1,0,0,1,0,0
-2025-09-24 13:00:00-04:00,Building Permits MoM FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 13:00:00-04:00,Building Permits MoM FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 13:00:00-04:00,Building Permits FinalAUG,2025,4,0,0,0,0,0,1
 2025-09-24 16:10:00-04:00,Fed Daly Speech,2025,4,0,0,0,0,1,1
-2025-09-24 16:10:00-04:00,Fed Daly Speech,2025,4,0,0,0,0,1,1
 2025-09-25 08:20:00-04:00,Fed Goolsbee Speech,2025,4,0,0,0,0,1,1
-2025-09-25 08:20:00-04:00,Fed Goolsbee Speech,2025,4,0,0,0,0,1,1
-2025-09-25 08:30:00-04:00,Non Defense Goods Orders Ex AirAUG,2025,4,0,0,0,0,0,1
 2025-09-25 08:30:00-04:00,Jobless Claims 4-week AverageSEP/20,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Durable Goods Orders MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,GDP Growth Rate QoQ FinalQ2,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Durable Goods Orders Ex Transp MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,GDP Price Index QoQ FinalQ2,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Goods Trade Balance AdvAUG,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Initial Jobless ClaimsSEP/20,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Retail Inventories Ex Autos MoM AdvAUG,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Wholesale Inventories MoM AdvAUG,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Continuing Jobless ClaimsSEP/13,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Core PCE Prices QoQ FinalQ2,2025,1,1,1,0,0,0,0
-2025-09-25 08:30:00-04:00,Corporate Profits QoQ FinalQ2,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,PCE Prices QoQ FinalQ2,2025,1,1,1,0,0,0,0
-2025-09-25 08:30:00-04:00,Real Consumer Spending QoQ FinalQ2,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Jobless Claims 4-week AverageSEP/20,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,GDP Sales QoQ FinalQ2,2025,4,0,0,0,0,0,1
-2025-09-25 08:30:00-04:00,Durable Goods Orders ex Defense MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-25 08:30:00-04:00,GDP Growth Rate QoQ FinalQ2,2025,4,0,0,0,0,0,1
 2025-09-25 08:30:00-04:00,Continuing Jobless ClaimsSEP/13,2025,4,0,0,0,0,0,1
 2025-09-25 08:30:00-04:00,Real Consumer Spending QoQ FinalQ2,2025,4,0,0,0,0,0,1
@@ -34394,54 +34288,28 @@ datetime,events,year,tier,IND_MACRO,IND_Tier1,IND_Tier2,IND_Tier3,IND_FED,IND_Ti
 2025-09-25 08:30:00-04:00,Durable Goods Orders Ex Transp MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-25 08:30:00-04:00,Goods Trade Balance AdvAUG,2025,4,0,0,0,0,0,1
 2025-09-25 09:00:00-04:00,Fed Williams Speech,2025,4,0,0,0,0,1,1
-2025-09-25 09:00:00-04:00,Fed Williams Speech,2025,4,0,0,0,0,1,1
-2025-09-25 10:00:00-04:00,Existing Home Sales MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-25 10:00:00-04:00,Existing Home SalesAUG,2025,4,0,0,0,0,0,1
 2025-09-25 10:00:00-04:00,Existing Home SalesAUG,2025,4,0,0,0,0,0,1
 2025-09-25 10:00:00-04:00,Existing Home Sales MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-25 10:30:00-04:00,EIA Natural Gas Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
-2025-09-25 10:30:00-04:00,EIA Natural Gas Stocks ChangeSEP/19,2025,4,0,0,0,0,0,1
 2025-09-25 11:00:00-04:00,Kansas Fed Composite IndexSEP,2025,4,0,0,0,0,0,1
-2025-09-25 11:00:00-04:00,Kansas Fed Composite IndexSEP,2025,4,0,0,0,0,0,1
-2025-09-25 11:00:00-04:00,Kansas Fed Manufacturing IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-25 11:00:00-04:00,Kansas Fed Manufacturing IndexSEP,2025,4,0,0,0,0,0,1
 2025-09-25 11:30:00-04:00,4-Week Bill Auction,2025,3,1,0,0,1,0,0
 2025-09-25 11:30:00-04:00,8-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-25 11:30:00-04:00,4-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-25 11:30:00-04:00,8-Week Bill Auction,2025,3,1,0,0,1,0,0
-2025-09-25 12:00:00-04:00,30-Year Mortgage RateSEP/25,2025,4,0,0,0,0,0,1
-2025-09-25 12:00:00-04:00,15-Year Mortgage RateSEP/25,2025,4,0,0,0,0,0,1
 2025-09-25 12:00:00-04:00,15-Year Mortgage RateSEP/25,2025,4,0,0,0,0,0,1
 2025-09-25 12:00:00-04:00,30-Year Mortgage RateSEP/25,2025,4,0,0,0,0,0,1
 2025-09-25 13:00:00-04:00,7-Year Note Auction,2025,3,1,0,0,1,0,0
-2025-09-25 13:00:00-04:00,7-Year Note Auction,2025,3,1,0,0,1,0,0
-2025-09-25 15:30:00-04:00,Fed Daly Speech,2025,4,0,0,0,0,1,1
 2025-09-25 15:30:00-04:00,Fed Daly Speech,2025,4,0,0,0,0,1,1
 2025-09-25 16:30:00-04:00,Fed Balance SheetSEP/24,2025,4,0,0,0,0,0,1
-2025-09-25 16:30:00-04:00,Fed Balance SheetSEP/24,2025,4,0,0,0,0,0,1
-2025-09-26 08:30:00-04:00,Personal Income MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-26 08:30:00-04:00,Personal Spending MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-26 08:30:00-04:00,PCE Price Index MoMAUG,2025,1,1,1,0,0,0,0
-2025-09-26 08:30:00-04:00,PCE Price Index MoMAUG,2025,1,1,1,0,0,0,0
-2025-09-26 08:30:00-04:00,PCE Price Index YoYAUG,2025,1,1,1,0,0,0,0
-2025-09-26 08:30:00-04:00,Core PCE Price Index YoYAUG,2025,1,1,1,0,0,0,0
 2025-09-26 08:30:00-04:00,Personal Income MoMAUG,2025,4,0,0,0,0,0,1
-2025-09-26 08:30:00-04:00,Core PCE Price Index MoMAUG,2025,1,1,1,0,0,0,0
 2025-09-26 08:30:00-04:00,Personal Spending MoMAUG,2025,4,0,0,0,0,0,1
 2025-09-26 08:30:00-04:00,Core PCE Price Index YoYAUG,2025,1,1,1,0,0,0,0
 2025-09-26 08:30:00-04:00,Core PCE Price Index MoMAUG,2025,1,1,1,0,0,0,0
 2025-09-26 08:30:00-04:00,PCE Price Index YoYAUG,2025,1,1,1,0,0,0,0
 2025-09-26 10:00:00-04:00,Michigan Consumer Sentiment FinalSEP,2025,4,0,0,0,0,0,1
-2025-09-26 10:00:00-04:00,Michigan Current Conditions FinalSEP,2025,4,0,0,0,0,0,1
-2025-09-26 10:00:00-04:00,Michigan Inflation Expectations FinalSEP,2025,4,0,0,0,0,0,1
-2025-09-26 10:00:00-04:00,Michigan Consumer Expectations FinalSEP,2025,4,0,0,0,0,0,1
-2025-09-26 10:00:00-04:00,Michigan 5 Year Inflation Expectations FinalSEP,2025,4,0,0,0,0,0,1
-2025-09-26 10:00:00-04:00,Michigan Consumer Sentiment FinalSEP,2025,4,0,0,0,0,0,1
 2025-09-26 10:00:00-04:00,Michigan Inflation Expectations FinalSEP,2025,4,0,0,0,0,0,1
 2025-09-26 10:00:00-04:00,Michigan 5 Year Inflation Expectations FinalSEP,2025,4,0,0,0,0,0,1
 2025-09-26 10:00:00-04:00,Michigan Current Conditions FinalSEP,2025,4,0,0,0,0,0,1
 2025-09-26 10:00:00-04:00,Michigan Consumer Expectations FinalSEP,2025,4,0,0,0,0,0,1
-2025-09-26 13:00:00-04:00,Baker Hughes Oil Rig CountSEP/26,2025,4,0,0,0,0,0,1
-2025-09-26 13:00:00-04:00,Baker Hughes Total Rigs CountSEP/26,2025,4,0,0,0,0,0,1
 2025-09-26 13:00:00-04:00,Baker Hughes Oil Rig CountSEP/26,2025,4,0,0,0,0,0,1
 2025-09-26 13:00:00-04:00,Baker Hughes Total Rigs CountSEP/26,2025,4,0,0,0,0,0,1
